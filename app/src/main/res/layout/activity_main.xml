@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <View
+            android:id="@+id/colorChoice"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/scoreTimer"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/colorChoice"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/countdownTimer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:text="@string/countdownTimerTime" />
+
+            <TextView
+                android:id="@+id/correct"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:text="@string/correct_starting" />
+
+            <TextView
+                android:id="@+id/incorrect"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:text="@string/incorrect_starting" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/colorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTop" />
+</androidx.constraintlayout.widget.ConstraintLayout>

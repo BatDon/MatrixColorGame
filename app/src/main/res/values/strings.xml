@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MatrixColorGame</string>
+    <string name="countdownTimerTime">20</string>
+    <string name="correct_starting">Correct: 0</string>
+    <string name="incorrect_starting">Incorrect: 0</string>
+    <string name="endOfGame">Game Over</string>
+    <string name="playAgain">Play Again</string>
+    <string name="endGame">End Game</string>
+</resources>
